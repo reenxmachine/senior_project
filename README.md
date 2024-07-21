@@ -44,4 +44,4 @@ Project by:
 Thanks to Professor Cordano
 
 ## Project status
-Ongoing
+Finished
