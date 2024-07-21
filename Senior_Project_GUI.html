@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Senior Project GUI</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <style>
+            body {
+                font-family: 'Arial', sans-serif;
+                margin: 20px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            canvas {
+                max-width: 800px;
+                margin: 20px 0;
+            }
+            h1 {
+            width: 100%;
+            margin-bottom: 20px;
+            }
+
+            nav {
+            width: 100%;
+            background-color: #333;
+            overflow: hidden;
+            }
+
+            nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            nav a:hover {
+            background-color: #ddd;
+            color: black;
+            }
+
+            .chart-container canvas {
+            max-width: 100%;
+            }
+
+            .chart-container,
+            .statistics-container {
+            width: 50%;
+            box-sizing: border-box;
+            padding: 10px;
+            }
+
+            .statistics-box {
+            background-color: #f0f0f0;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+            cursor: pointer;
+            }
+
+            .statistics-box:hover {
+            background-color: #e0e0e0;
+            }
+
+            .statistics-box h2 {
+            margin-top: 0;
+            font-size: 1.5em;
+            }
+
+            .statistics-box p {
+            margin: 5px 0;
+            }
+
+            .alert-banner {
+            width: 100%;
+            background-color: #ff4848;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            }
+
+            .alert-menu {
+            display: none;
+            position: absolute;
+            right: 50px;
+            background-color: #ffffff;
+            padding: 8px;
+            border-radius: 4px;
+            color: rgb(0, 0, 0);
+            cursor: pointer;
+            }
+
+            .alert-banner:hover .alert-menu {
+            display: block;
+            }
+
+            .alert-menu-item {
+            padding: 5px;
+            }
+
+            .column {
+            float: left;
+            width: 33.33%;
+            padding: 5px;
+            }
+
+            /* Clearfix (clear floats) */
+            .row::after {
+            content: "";
+            clear: both;
+            display: table;
+            }
+
+            #logoimg {
+                width: 30%;
+            }
+        </style>
+    </head>
+    <body>
+        <!--logo-->
+
+        <div class="row">
+            <div class="column" id="logoimg">
+                <img src="logo.png" alt="Sandsiger" id="logoimg" class="logobar">
+            </div>
+            <div class="column">
+                <h1>Sandsiger</h1>
+                <h3> Senior Project: Intrusion Detection System using Machine Learning </h3>
+                </div>
+          </div>
+        <!--Top Navigation Bar-->
+        <nav>
+            <a href="#Home">Home</a>
+            <a href="#About">About</a>
+            <a href="#Dataset">Dataset</a>
+            <a href="#Configuration">Configuration</a>
+        </nav>
+
+        <!--Alert Banner-->
+        <div class="alert-banner">
+            High-severity detection alert!
+            <div class="alert-menu">
+                <div class="alert-menu-item">Option 1</div>
+                <div class="alert-menu-item">Option 2</div>
+                <div class="alert-menu-item">Option 3</div>
+            </div>
+        </div>
+
+        <!--Output Graphs-->
+
+
+        <img src="/figs/Figure_1.png" alt="Figure 1">
+
+        <img src="/figs/Figure_2.png" alt="Figure 2">
+
+
+
+        <!--
+
+
+
+        <!--Chart to the left
+        <div class="chart-container">
+            <canvas id="myChart" width="800" height="400"></canvas>
+        </div>
+
+        <!--Stats Section to the right
+        <div class="statistics-container">
+            <div class="statistics-box">
+                <h2>Statistics 1</h2>
+                <p>Data Stat 1: Value</p>
+                <p>Data Stat 2: Value</p>
+            </div>
+            <div class="statistics-box">
+                <h2>Statistics 2</h2>
+                <p>Data Stat 1: Value</p>
+                <p>Data Stat 2: Value</p>
+            </div>
+        </div>
+
+
+
+
+
+
+        <script>
+        
+        var data = {
+            labels: ['Cat1', 'Cat2', 'Cat3', 'Cat4'],
+            datasets: [{
+                label: 'Type',
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 2,
+                data: [10, 20, 15, 5, 25]
+            }]
+        };
+
+        var options = {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        };
+
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: data,
+            options: options
+        });
+
+        
+        </script>
+
+
+        <div id="output">
+            <!-- Your script output goes here 
+        </div>
+
+
+        -->
+        
+        <p> Our project deliverable is an intrusion detection system that uses machine learning to identify threats in a network or dataset </p>
+    </body>
+</html>
